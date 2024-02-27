@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap')
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous">
+        </script>
+
+    <script>
+        $(function () {
+            $(".toggle").on("click", function () {
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+                } else {
+                    $(".item").addClass("active");
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="#">CoderDaniel.com</a></li>
+            <li class="item"><a href="MiWeb.html">Start</a></li>
+            <li class="item"><a href="#">About me</a></li>
+            <li class="item"><a href="#">Project</a></li>
+            <li class="item"><a href="#">Contact</a></li>
+            <li class="item button"><a href="img/DanielOlivaresVelascoCV.pdf" download="CoderDaniel_CV">Download CV</a>
+            </li>
+            <li class="item button secondary"><a href="#">?</a></li>
+            <li class="toggle"><a href="#"><span class="bars"></span></a></li>
+        </ul>
+    </nav>
+    <main>
+        <a href="#"></a>
+    </main>
+
+    <section class="sec1">
+
+        <div class="contenido">
+
+            <div class="line-1 anim-typewriter">
+                <h3>¡Bienvenido a mi rincón digital!</h3>
+            </div>
+            <p class="texto">
+                Soy Daniel, un informático y programador en constante aprendizaje. Este espacio refleja mis
+                conocimientos sobre el mundo de la informática y la programación. <!-- donde he desarrollado habilidades en
+                lenguajes como Java, JavaScript, PHP, HTML y CSS, así como experiencia en bases de datos. -->
+            </p>
+
+            <!--
+            <p class="texto">
+                Desde el diseño web hasta el desarrollo de aplicaciones, cada proyecto es una oportunidad para aprender
+                y mejorar. Aquí comparto no solo mis creaciones, sino también mi entusiasmo por el constante crecimiento
+                en el ámbito de la informática. Acompáñame en este viaje cibernético, donde la tecnología se encuentra
+                con la creatividad.
+            </p>
+            -->
+
+            <button class="button2" role="button">Certificates</button>
+
+        </div>
+
+        <div><img class="imagen1" src="img/imgdaniel.png" alt=""></div>
+
+    </section>
+
+
+    <section>
+
+    </section>
+
+
+    <section class="sec2">
+
+        <div class="contenido2">
+            <h4>HARDSKILLS:</h4>
+            <p class="texto2">Gestión de Sistemas Operativos.<br>
+                Administración de Servicios.<br>
+                Configuración de redes.<br>
+                Montaje i mantenimiento Hardware.<br>
+                Ofimática (Word, Excel, Access).<br>
+                Multimedia (Photoshop, Premiere).
+                <br><br>
+                Lenguaje de programación:<br><br>
+                DAW: C++, JAVA, XML, XSD, XSL, SQL, PLSQL.<br>
+                SMIX: HTML y CSS.
+            </p>
+            <br>
+            <h4>SOFTSKILLS:</h4>
+            <p class="texto2">
+                Organización y planificación.<br>
+                Trabajo por objetivos.<br>
+                Mantenimiento de la limpieza y el orden en el espacio de trabajo.<br>
+                Atención y concentración.
+            </p>
+        </div>
+
+    </section>
+
+
+
+    <section class="form_wrap">
+
+        <section class="cantact_info">
+            <section class="info_title">
+                <span class="fa fa-user-circle"></span>
+                <h2>INFORMACION<br>DE CONTACTO</h2>
+            </section>
+            <section class="info_items">
+                <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
+                <p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+            </section>
+        </section>
+
+        <form action="" class="form_contact">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+                <label for="names">Nombres *</label>
+                <input type="text" id="names">
+
+                <label for="phone">Telefono / Celular</label>
+                <input type="text" id="phone">
+
+                <label for="email">Correo electronico *</label>
+                <input type="text" id="email">
+
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje"></textarea>
+
+                <input type="button" value="Enviar Mensaje" id="btnSend">
+            </div>
+        </form>
+
+    </section>
+
+
+
+</body>
+<footer>
+
+</footer>
+
+</html>

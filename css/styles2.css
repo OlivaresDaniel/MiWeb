@@ -1,0 +1,625 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    font-family: "Press Start 2P", system-ui;
+
+}
+
+/* MENU */
+
+nav {
+    background: #222;
+    padding: 5px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.logo a,
+.toggle a {
+    font-size: 20px;
+}
+
+.button.secondary {
+    border-bottom: 1px #ffffff solid;
+}
+
+/* Mobile menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+/* Navbar Toggle */
+.toggle {
+    cursor: pointer;
+}
+
+.bars {
+    background: #ffffff;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.bars:before,
+.bars:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.bars:before {
+    top: 5px;
+}
+
+.bars:after {
+    top: -5px;
+}
+
+/* Tablet menu */
+@media all and (min-width: 800px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle {
+        order: 2;
+    }
+
+    .button.secondary {
+        border: 0;
+    }
+
+    .button a {
+        padding: 7.5px 15px;
+        background: teal;
+        border: 1px #006d6d solid;
+        border-radius: 50em;
+    }
+
+    .button.secondary a {
+        background: transparent;
+    }
+
+    .button a:hover {
+        text-decoration: none;
+        transition: all .25s;
+    }
+
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+
+    .button.secondary a:hover {
+        color: #ddd;
+    }
+}
+
+/* Desktop menu */
+@media all and (min-width: 1400px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .menu li {
+        padding: 15px 10px;
+    }
+
+    .menu li.button {
+        padding-right: 0;
+    }
+}
+
+/* Contenido */
+
+/* Sec1 */
+.sec1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenido {
+    background-color: #ffffff;
+    margin-top: 350px;
+    margin-left: 210px;
+    margin-right: 210px;
+    margin-bottom: 300px;
+
+}
+
+/* Bienvenida Animada */
+
+h3 {
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.line-1 {
+    margin: 0 auto;
+    border-right: 4px solid rgba(0, 0, 0, 0.65);
+    font-size: 140%;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 900ms steps(24) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 38em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(0, 0, 0, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.texto {
+    line-height: 30px;
+}
+
+.imagen1 {
+
+    width: 500px;
+    padding-right: 100px;
+    /* border-radius: 50%; */
+    /* border: #000 solid; */
+}
+
+/* media query sec1 */
+
+@media screen and (max-width: 1724px) {
+    .sec1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenido {
+        margin-bottom: 0px !important;
+
+    }
+
+    .imagen1 {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1737px) {
+    .contenido {
+        background-color: #ffffff !important;
+        margin-left: 162px !important;
+        margin-right: 162px !important;
+        margin-bottom: 300px !important;
+
+    }
+
+    .imagen1 {
+        width: 230px !important;
+    }
+}
+
+
+@media screen and (max-width: 1757px) {
+    .imagen1 {
+
+        width: 480px !important;
+
+        /* border-radius: 50%; */
+        /* border: #000 solid; */
+    }
+}
+
+
+@media screen and (max-width: 1807px) {
+    .imagen1 {
+
+        width: 500px;
+        padding-right: 50px !important;
+        /* border-radius: 50%; */
+        /* border: #000 solid; */
+    }
+}
+
+@media screen and (max-width: 1830px) {
+    .imagen1 {
+
+        width: 500px;
+        /* border-radius: 50%; */
+        /* border: #000 solid; */
+    }
+}
+
+@media screen and (max-width: 1894px) {
+    .contenido {
+        background-color: #ffffff;
+        margin-top: 350px;
+        margin-left: 170px;
+        margin-right: 170px;
+        margin-bottom: 300px;
+
+    }
+}
+
+
+
+/* Sect2 */
+.sec2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido2 {
+    background-color: #b1b0b0;
+    padding-top: 140px;
+    padding-bottom: 150px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+
+
+
+.texto2 {
+    line-height: 30px;
+}
+
+/* BOTON */
+
+.button2 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 40px;
+
+
+}
+
+.button2:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+@media (min-width: 768px) {
+    .button-54 {
+        padding: 0.25em 0.75em;
+    }
+}
+
+
+
+
+/* FORMULARIO =================================== */
+
+:focus {
+    outline: none;
+}
+
+.form_wrap {
+    width: 1050px;
+    height: 530px;
+    margin: 50px auto;
+    display: flex;
+
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Informacion de Contacto*/
+
+.cantact_info::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: #000000;
+    opacity: 0.9;
+}
+
+.cantact_info {
+    width: 38%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.info_title,
+.info_items {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.info_title {
+    margin-bottom: 60px;
+}
+
+.info_title span {
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info_title h2 {
+    font-size: 33.5px;
+    text-align: center;
+}
+
+.info_items p {
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info_items p:nth-child(1) span {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.info_items p:nth-child(2) span {
+    font-size: 50px;
+    margin-right: 15px;
+    margin-left: 4px;
+}
+
+
+/* Formulario de contacto*/
+form.form_contact {
+    width: 62%;
+    padding: 30px 40px;
+}
+
+form.form_contact h2 {
+    font-size: 23px;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 30px;
+}
+
+form.form_contact .user_info {
+    display: flex;
+    flex-direction: column;
+}
+
+form.form_contact label {
+    font-weight: 600;
+}
+
+form.form_contact input,
+form.form_contact textarea {
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-bottom: 2px solid #000000;
+
+    font-family: "Press Start 2P", system-ui;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form.form_contact textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 90px;
+}
+
+form.form_contact input[type="button"] {
+    width: 180px;
+    background: #000000;
+    padding-right: 250px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    border-radius: 25px;
+
+    align-self: flex-end;
+
+    color: #fff;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form.form_contact input[type="button"]:hover {
+    background: #006d6d;
+}
+
+/* Ventana de errores*/
+.modal_wrap {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje_modal {
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    padding: 30px 20px 15px;
+}
+
+.mensaje_modal h3 {
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.mensaje_modal h3:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #C5C5C5;
+    margin: 10px 0px 15px;
+}
+
+.mensaje_modal p {
+    font-size: 16px;
+    color: #606060;
+}
+
+.mensaje_modal p:before {
+    content: "\f00d";
+    font-family: FontAwesome;
+    display: inline-block;
+    color: #E25151;
+    margin-right: 8px;
+}
+
+#btnClose {
+    display: inline-block;
+    padding: 3px 10px;
+    margin-top: 10px;
+
+    background: #E25151;
+    color: #fff;
+    border: 2px solid #B14141;
+    cursor: pointer;
+
+    /* float: right; */
+}
+
+
+/* FOOTER */
